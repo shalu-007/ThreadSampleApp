@@ -20,8 +20,8 @@ import android.app.IntentService;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
+import android.text.format.DateUtils;
 
-import org.apache.http.HttpStatus;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
@@ -142,9 +142,7 @@ public class RSSPullService extends IntentService {
                     if (0 != storedModifiedDate) {
                         localHttpURLConnection.setRequestProperty(
                                 "If-Modified-Since",
-                                org.apache.http.impl.cookie.DateUtils.formatDate(
-                                        new Date(storedModifiedDate),
-                                        org.apache.http.impl.cookie.DateUtils.PATTERN_RFC1123));
+                                "5656131643135");
                     }
 
                     // Marks that new metadata does not need to be retrieved

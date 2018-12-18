@@ -16,8 +16,6 @@
 
 package com.circletech.threadsampleapp;
 
-import com.example.android.threadsample.PhotoDecodeRunnable.TaskRunnableDecodeMethods;
-import com.example.android.threadsample.PhotoDownloadRunnable.TaskRunnableDownloadMethods;
 
 import android.graphics.Bitmap;
 
@@ -33,7 +31,7 @@ import java.net.URL;
  * run a decode, and then start over again. This class can be pooled and reused as necessary.
  */
 public class PhotoTask implements
-        TaskRunnableDownloadMethods, TaskRunnableDecodeMethods {
+        PhotoDownloadRunnable.TaskRunnableDownloadMethods, PhotoDecodeRunnable.TaskRunnableDecodeMethods {
 
     /*
      * Creates a weak reference to the ImageView that this Task will populate.

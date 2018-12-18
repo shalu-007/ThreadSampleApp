@@ -16,7 +16,6 @@
 
 package com.circletech.threadsampleapp;
 
-import com.example.android.threadsample.PhotoDecodeRunnable.TaskRunnableDecodeMethods;
 
 import java.io.EOFException;
 import java.io.IOException;
